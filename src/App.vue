@@ -1,32 +1,39 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
-  </div>
+	<div id="app">
+		<Sidebar v-if="isAuth" />
+		<div class="main">
+			<Navbar v-if="isAuth" />
+			<div class="main-content px-3 pt-3">
+				<router-view />
+			</div>
+		</div>
+	</div>
 </template>
 
+<script>
+	const Navbar = () => import("@/components/layout/Navbar.vue");
+	const Sidebar = () => import("@/components/layout/Sidebar.vue");
+
+	export default {
+		name: "App",
+		components: { Navbar, Sidebar }
+	};
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+	.main {
+		position: relative;
+		width: calc(100% - 60px);
+		left: 60px;
+		min-height: 100vh;
+		background: #ebeef0;
+		transition: 0.5s;
+		&.active {
+			width: calc(100% - 300px);
+			left: 300px;
+		}
+		.main-content {
+			min-height: calc(100vh - 60px);
+		}
+	}
 </style>
