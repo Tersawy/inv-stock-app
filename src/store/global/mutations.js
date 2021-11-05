@@ -12,3 +12,5 @@ export const setError = (_state, message) => showToast(message, "danger");
 export const setBreads = (state, breads) => (state.breads = breads);
 
 export const newToast = (state, { msg, type }) => showToast(msg, type);
+
+export const setSidebar = (state, value) => (state.sidebarIsOpened = value);

@@ -68,3 +68,7 @@ export const PAYMENT_STATUS_UNPAID = 1;
 export const PAYMENT_STATUS_PARTIAL = 2;
 export const PAYMENT_STATUS = [PAYMENT_STATUS_PAID, PAYMENT_STATUS_UNPAID, PAYMENT_STATUS_PARTIAL];
 export const PAYMENT_STATUS_STR = [$t("Paid"), $t("Unpaid"), $t("Partial")];
+
+export const USER = 0;
+export const ADMIN = 1;
+export const OWNER = 2;

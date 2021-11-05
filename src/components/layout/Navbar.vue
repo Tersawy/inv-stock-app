@@ -28,24 +28,12 @@
 <script>
 	import { mapActions } from "vuex";
 	export default {
-		mounted() {
-			let navigation = document.querySelector("#app > .navigation");
-			let main = document.querySelector("#app > .main");
-			let mainContent = document.querySelector("#app > .main > .main-content");
-			mainContent.addEventListener("click", () => {
-				main.classList.remove("active");
-				navigation.classList.remove("active");
-			});
-		},
 		methods: {
 			...mapActions({
 				logout: "Auth/logout"
 			}),
 			toggleMenu() {
-				let navigation = document.querySelector(".navigation");
-				let main = document.querySelector("#app > .main");
-				navigation.classList.toggle("active");
-				main.classList.toggle("active");
+				this.$store.commit("setSidebar", !this.$store.state.sidebarIsOpened);
 			}
 		}
 	};

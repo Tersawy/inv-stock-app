@@ -9,8 +9,6 @@ export const login = (state, data) => {
 	if ([0, 1, 2].includes(data.user.type)) {
 		return router.push("/");
 	}
-
-	return router.push({ name: "CustomerDashboard" });
 };
 
 export const setAuth = (state) => {

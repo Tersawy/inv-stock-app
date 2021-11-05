@@ -1,5 +1,5 @@
 <template>
-	<div class="navigation">
+	<div :class="{ navigation: true, active: sidebarIsOpened }">
 		<VuePerfectScrollbar class="scroll-area" v-once :settings="{ suppressScrollX: true, wheelPropagation: false }">
 			<ul>
 				<li>
@@ -50,6 +50,12 @@
 					{ title: "Currency", icon: "fas fa-dollar-sign fa-lg fa-fw", to: "/currency", awesome: true }
 				]
 			};
+		},
+
+		computed: {
+			sidebarIsOpened() {
+				return this.$store.state.sidebarIsOpened;
+			}
 		}
 	};
 </script>

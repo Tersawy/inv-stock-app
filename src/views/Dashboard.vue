@@ -5,16 +5,16 @@
 				<div class="dashboard-card-box py-3">
 					<b-row>
 						<b-col>
-							<report-card name="Today Sales" icon="cart-plus" number="1780.00 $" />
+							<report-card :name="$t('todaySales')" icon="cart-plus" number="1780.00 $" />
 						</b-col>
 						<b-col>
-							<report-card name="Income" icon="fas fa-hand-holding-usd" awesome number="2300.00 $" />
+							<report-card :name="$t('income')" icon="fas fa-hand-holding-usd" awesome number="2300.00 $" />
 						</b-col>
 						<b-col>
-							<report-card name="Expenses" icon="far fa-money-bill-alt" awesome number="1888.00 $" />
+							<report-card :name="$t('expenses')" icon="far fa-money-bill-alt" awesome number="1888.00 $" />
 						</b-col>
 						<b-col>
-							<report-card name="Profits" icon="fas fa-coins" awesome number="412.00 $" />
+							<report-card :name="$t('profits')" icon="fas fa-coins" awesome number="412.00 $" />
 						</b-col>
 					</b-row>
 				</div>
@@ -23,32 +23,32 @@
 						<b-col cols="8">
 							<div class="recent-sales shadow-sm bg-white px-3 pb-3 rounded">
 								<div class="recent-header py-3 d-flex justify-content-between align-items-center">
-									<h3 class="mb-0">Recent Sales</h3>
+									<h3 class="mb-0">{{ $t("recentSales") }}</h3>
 									<router-link to="/sale">
-										<b-btn variant="primary">View All</b-btn>
+										<b-btn variant="primary">{{ $t("viewAll") }}</b-btn>
 									</router-link>
 								</div>
 								<table class="table table-hover mb-0">
 									<thead>
 										<tr>
-											<th>Reference</th>
-											<th>Customer</th>
-											<th>Status</th>
-											<th>Total Price</th>
-											<th>Paid</th>
-											<th>Due</th>
-											<th>Payment Status</th>
+											<th>{{ $t("invoice.reference") }}</th>
+											<th>{{ $t("invoice.customer") }}</th>
+											<th>{{ $t("invoice.status") }}</th>
+											<th>{{ $t("invoice.totalPrice") }}</th>
+											<th>{{ $t("invoice.paid") }}</th>
+											<th>{{ $t("invoice.due") }}</th>
+											<th>{{ $t("invoice.paymentStatus") }}</th>
 										</tr>
 									</thead>
 									<tbody>
 										<tr v-for="(sale, i) in sales" :key="i">
 											<td>{{ sale.reference }}</td>
-											<td v-relation="sale.customer"></td>
+											<td>{{ sale.customer | relation }}</td>
 											<td v-sale-status="sale.status"></td>
-											<td v-floating.2="sale.grand_total"></td>
-											<td v-floating.2="sale.paid"></td>
-											<td v-floating.2="sale.due"></td>
-											<td v-payment-status="sale.payment_status"></td>
+											<td>{{ sale.grandTotal | floating }}</td>
+											<td>{{ sale.paid | floating }}</td>
+											<td>{{ sale.due | floating }}</td>
+											<td v-payment-status="sale.paymentStatus"></td>
 										</tr>
 									</tbody>
 								</table>
@@ -57,9 +57,9 @@
 						<b-col cols="4">
 							<div class="recent-customers shadow-sm bg-white px-3 pb-3 rounded">
 								<div class="recent-header py-3 d-flex justify-content-between align-items-center">
-									<h3 class="mb-0">Recent Customers</h3>
+									<h3 class="mb-0">{{ $t("recentCustomers") }}</h3>
 									<router-link to="/customer">
-										<b-btn variant="primary">View All</b-btn>
+										<b-btn variant="primary">{{ $t("viewAll") }}</b-btn>
 									</router-link>
 								</div>
 								<table class="table table-hover mb-0">
@@ -67,7 +67,7 @@
 										<tr v-for="(customer, i) in customers" :key="i">
 											<td width="60px">
 												<div class="customer-img">
-													<img :src="require(`@/assets/${customer.img}`)" alt="" />
+													<img :src="require(`@/assets/images/${customer.img}`)" alt="" />
 												</div>
 											</td>
 											<td>
@@ -110,55 +110,55 @@
 						reference: "SL_1111",
 						customer: { id: 1, name: "Star Refigerator" },
 						status: 0,
-						grand_total: 74,
+						grandTotal: 74,
 						paid: 74,
 						due: 0,
-						payment_status: 0
+						paymentStatus: 0
 					},
 					{
 						reference: "SL_1112",
 						customer: { id: 2, name: "Kamal Salem" },
 						status: 2,
-						grand_total: 1890,
+						grandTotal: 1890,
 						paid: 890,
 						due: 1000,
-						payment_status: 2
+						paymentStatus: 2
 					},
 					{
 						reference: "SL_1113",
 						customer: { id: 2, name: "Mohamed Ashraf" },
 						status: 1,
-						grand_total: 1595,
+						grandTotal: 1595,
 						paid: 0,
 						due: 1595,
-						payment_status: 1
+						paymentStatus: 1
 					},
 					{
 						reference: "SL_1115",
 						customer: { id: 2, name: "Walk-in-customer" },
 						status: 0,
-						grand_total: 2600,
+						grandTotal: 2600,
 						paid: 2600,
 						due: 0,
-						payment_status: 0
+						paymentStatus: 0
 					},
 					{
 						reference: "SL_1114",
 						customer: { id: 2, name: "Said Ali" },
 						status: 2,
-						grand_total: 3265,
+						grandTotal: 3265,
 						paid: 2000,
 						due: 1265,
-						payment_status: 2
+						paymentStatus: 2
 					},
 					{
 						reference: "SL_1115",
 						customer: { id: 2, name: "Asmaa Foaad" },
 						status: 0,
-						grand_total: 4580,
+						grandTotal: 4580,
 						paid: 4580,
 						due: 0,
-						payment_status: 0
+						paymentStatus: 0
 					}
 				]
 			};

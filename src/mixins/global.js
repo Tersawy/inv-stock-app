@@ -1,6 +1,13 @@
 import { mapState } from "vuex";
+import { showToast } from "../components/ui/utils";
 
 const globalMixin = {
+	data() {
+		return {
+			loading: false
+		};
+	},
+
 	computed: {
 		...mapState({
 			me: (state) => state.Auth.user
@@ -24,6 +31,13 @@ const globalMixin = {
 
 		BASE_URL() {
 			return process.env.VUE_APP_BASE_URL;
+		}
+	},
+
+	methods: {
+		showToast,
+		setLoading(value = false) {
+			this.loading = value;
 		}
 	}
 };

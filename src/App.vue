@@ -1,9 +1,9 @@
 <template>
 	<div id="app">
 		<Sidebar v-if="isAuth" />
-		<div class="main">
+		<div :class="{ main: true, active: sidebarIsOpened }">
 			<Navbar v-if="isAuth" />
-			<div class="main-content px-3 pt-3">
+			<div class="main-content px-3 pt-3" @click="$store.commit('setSidebar', false)">
 				<router-view />
 			</div>
 		</div>
@@ -16,7 +16,13 @@
 
 	export default {
 		name: "App",
-		components: { Navbar, Sidebar }
+		components: { Navbar, Sidebar },
+
+		computed: {
+			sidebarIsOpened() {
+				return this.$store.state.sidebarIsOpened;
+			}
+		}
 	};
 </script>
 

@@ -3,13 +3,19 @@ import App from "@/App.vue";
 import router from "@/router";
 import store from "@/store";
 import i18n from "@/plugins/i18n";
-import globalMixin from "@/mixins/gobal";
+import globalMixin from "@/mixins/global";
 import $axios from "@/plugins/api";
 import { BootstrapVue, BootstrapVueIcons } from "bootstrap-vue";
 import MainSection from "@/components/layout/MainSection";
 import "@fortawesome/fontawesome-free/js/all";
 import "@fortawesome/fontawesome-free/css/all.css";
 import "@/assets/scss/main.scss";
+
+window.String.prototype.toCapitalize = function () {
+	let firstLetter = this.charAt(0).toLocaleUpperCase();
+	let lastLetters = this.slice(0).toLocaleLowerCase();
+	return firstLetter + lastLetters;
+};
 
 Vue.use(BootstrapVue);
 Vue.use(BootstrapVueIcons);
@@ -18,6 +24,7 @@ Vue.mixin(globalMixin);
 
 Vue.prototype.$axios = $axios;
 Vue.prototype.$store = store;
+Vue.prototype.$ipc = window.ipc;
 
 Vue.component("main-section", MainSection);
 
@@ -44,6 +51,9 @@ router.beforeEach(async (to, _from, next) => {
 });
 
 Vue.config.productionTip = false;
+
+import "./directives";
+import "./filters";
 
 new Vue({
 	router,

@@ -1,0 +1,22 @@
+const LOGIN = "LOGIN";
+const LOGOUT = "LOGOUT";
+const GET_AUTH = "GET_AUTH";
+const PROFILE = "PROFILE";
+
+const USERS = "USERS";
+const USER = "USER";
+const CREATE_USER = "USERS::CREATE";
+const UPDATE_USER = "USERS::UPDATE";
+const DELETE_USER = "USERS::DELETE";
+
+module.exports = {
+	LOGIN,
+	LOGOUT,
+	GET_AUTH,
+	PROFILE,
+	USERS,
+	USER,
+	CREATE_USER,
+	UPDATE_USER,
+	DELETE_USER
+};

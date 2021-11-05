@@ -1,4 +1,14 @@
 {
+	"profile": "Profile",
+	"settings": "Settings",
+	"logout": "Logout",
+	"recentSales": "Recent Sales",
+	"recentCustomers": "Recent Customers",
+	"viewAll": "View All",
+	"todaySales": "Today Sales",
+	"income": "Income",
+	"expenses": "Expenses",
+	"profits": "Profits",
 	"constants": {
 		"Received": "Received",
 		"Pending": "Pending",
@@ -30,5 +40,14 @@
 		"maxValue": "{attr} should be greater than or equal {value}",
 		"numeric": "{attr} must be a valid number",
 		"email": "{attr} not valid"
+	},
+	"invoice": {
+		"reference": "Reference",
+		"customer": "Customer",
+		"status": "Status",
+		"totalPrice": "Total Price",
+		"paid": "Paid",
+		"due": "Due",
+		"paymentStatus": "Payment Status"
 	}
 }

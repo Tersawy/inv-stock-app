@@ -30,7 +30,8 @@ const state = {
 		{ text: PAYMENT_METHODS_STR[PAYMENT_CREDIT_CARD], value: PAYMENT_CREDIT_CARD },
 		{ text: PAYMENT_METHODS_STR[PAYMENT_WESTREN_UNION], value: PAYMENT_WESTREN_UNION },
 		{ text: PAYMENT_METHODS_STR[PAYMENT_BANK_TRANSFER], value: PAYMENT_BANK_TRANSFER }
-	]
+	],
+	sidebarIsOpened: false
 };
 
 export default state;

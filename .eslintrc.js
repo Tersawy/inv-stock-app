@@ -13,5 +13,8 @@ module.exports = {
 		quotes: [2, "double", "avoid-escape"],
 		"comma-dangle": ["error", "never"],
 		"max-len": ["warn", { code: 180 }]
+	},
+	globals: {
+		__static: "readonly"
 	}
 };
