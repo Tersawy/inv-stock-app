@@ -28,8 +28,8 @@
 						<b-icon icon="cloud-upload" scale="1" class="mr-2"></b-icon>
 						Import
 					</b-btn>
-					<router-link to="/product/create" custom v-slot="{ navigate }">
-						<b-btn @click="navigate" @keypress.enter="navigate" role="link" variant="primary" class="d-inline-flex align-items-center">
+					<router-link to="/product/create">
+						<b-btn variant="primary" class="d-inline-flex align-items-center">
 							<b-icon icon="plus" scale="1.3" class="mr-1"></b-icon>
 							Create
 						</b-btn>
