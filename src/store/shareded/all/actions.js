@@ -1,6 +1,10 @@
 import api from "@/plugins/api";
 
+const ipc = window.ipc;
+
 const all = ({ commit, state }, queries = "") => {
+	let channel = state.prefix;
+	ipc.send(channel, queries);
 	api("get", state.prefix + queries, (err, res) => {
 		if (err) return commit("setErrors", err);
 		commit("all", res);
