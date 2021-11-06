@@ -44,11 +44,11 @@
 </template>
 
 <script>
-	import DiscountInput from "./ui/inputs/DiscountInput.vue";
-	import TaxMethodsInput from "./ui/inputs/TaxMethodsInput.vue";
-	import TaxInput from "./ui/inputs/TaxInput.vue";
-	import CostInput from "./ui/inputs/CostInput.vue";
-	import PriceInput from "./ui/inputs/PriceInput.vue";
+	import DiscountInput from "@/components/ui/inputs/DiscountInput.vue";
+	import TaxMethodsInput from "@/components/ui/inputs/TaxMethodsInput.vue";
+	import TaxInput from "@/components/ui/inputs/TaxInput.vue";
+	import CostInput from "@/components/ui/inputs/CostInput.vue";
+	import PriceInput from "@/components/ui/inputs/PriceInput.vue";
 
 	import { required, numeric, minValue } from "vuelidate/lib/validators";
 

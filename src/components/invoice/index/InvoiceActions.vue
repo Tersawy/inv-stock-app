@@ -10,12 +10,9 @@
 				<span class="mx-2 text-muted">Show Details</span>
 				<!-- </router-link> -->
 			</b-dropdown-item>
-
-			<b-dropdown-item link-class="py-2 d-flex align-items-center">
-				<router-link :to="{ name: `${this.namespace}Update`, params: { invoiceId: invoice.id } }">
-					<b-icon icon="pencil-square" scale="0.8"></b-icon>
-					<span class="mx-2 text-muted">Edit {{ invoiceName }}</span>
-				</router-link>
+			<b-dropdown-item link-class="py-2 d-flex align-items-center" :to="{ name: `${this.namespace}Update`, params: { invoiceId: invoice.id } }">
+				<b-icon icon="pencil-square" scale="0.8"></b-icon>
+				<span class="mx-2 text-muted">Edit {{ invoiceName }}</span>
 			</b-dropdown-item>
 
 			<b-dropdown-item link-class="py-2 d-flex align-items-center" @click="showPayments(invoice)">

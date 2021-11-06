@@ -1,5 +1,5 @@
 <template>
-	<b-modal id="payments" hide-footer size="lg" body-class="pt-0">
+	<b-modal id="payments" hide-footer size="xl" body-class="pt-0">
 		<template #modal-header="{ close }">
 			<div class="d-flex align-items-center justify-content-between w-100">
 				<div class="d-flex align-items-center">
@@ -21,7 +21,7 @@
 				<div class="h4 mb-0">
 					<b-icon icon="printer" variant="secondary" class="c-pointer" v-b-tooltip.hover="'Print'" @click="print(row.item)" />
 
-					<b-icon icon="chat-dots" variant="warning" class="c-pointer mx-2" v-b-tooltip.hover="'Send To Sms'" @click="sendSms(row.item)" />
+					<b-icon icon="chat-dots" variant="orange" class="c-pointer mx-2" v-b-tooltip.hover="'Send To Sms'" @click="sendSms(row.item)" />
 
 					<b-icon icon="envelope" variant="info" class="c-pointer" v-b-tooltip.hover="'Send To Email'" @click="sendEmail(row.item)" />
 

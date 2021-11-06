@@ -84,7 +84,7 @@
 </template>
 
 <script>
-	import ProductDetailForm from "@/components/ProductDetailsForm";
+	import ProductDetailForm from "@/components/invoice/form/ProductDetailsForm";
 	export default {
 		props: ["invoice", "invoiceFieldName", "namespace", "net", "checkQuantity"],
 

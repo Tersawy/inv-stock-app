@@ -2,6 +2,22 @@
 // @import url("https://fonts.googleapis.com/css?family=Poppins:200,300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 
+$blue: #007bff;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$orange: #fd7e14;
+$teal: #20c997;
+
+$theme-colors: (
+	"blue": $blue,
+	"indigo": $indigo,
+	"purple": $purple,
+	"pink": $pink,
+	"orange": $orange,
+	"teal": $teal
+);
+
 $font-size-base: 0.8125rem; // Assumes the browser default, typically `16px`
 $font-size-lg: $font-size-base * 1.25;
 $font-size-sm: $font-size-base * 0.8;
@@ -139,6 +155,36 @@ $paddingSizes: 10, 20, 30, 40, 50, 60;
 .badge-outline-info {
 	border-color: var(--info);
 	color: var(--info);
+}
+
+.badge-outline-blue {
+	border-color: var(--blue);
+	color: var(--blue);
+}
+
+.badge-outline-indigo {
+	border-color: var(--indigo);
+	color: var(--indigo);
+}
+
+.badge-outline-purple {
+	border-color: var(--purple);
+	color: var(--purple);
+}
+
+.badge-outline-pink {
+	border-color: var(--pink);
+	color: var(--pink);
+}
+
+.badge-outline-orange {
+	border-color: var(--orange);
+	color: var(--orange);
+}
+
+.badge-outline-teal {
+	border-color: var(--teal);
+	color: var(--teal);
 }
 
 .table {

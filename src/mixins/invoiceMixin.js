@@ -7,9 +7,9 @@ import WarehouseInput from "@/components/ui/inputs/WarehouseInput.vue";
 import DateInput from "@/components/ui/inputs/DateInput.vue";
 import NoteInput from "@/components/ui/inputs/NoteInput.vue";
 import InvoiceStatusInput from "@/components/ui/inputs/InvoiceStatusInput.vue";
-import InvoiceDetailsTable from "@/components/InvoiceProductsDetailsTable.vue";
-import InvoiceDetails from "@/components/InvoiceDetails.vue";
-import ProductsAutoComplete from "@/components/ProductsAutoComplete.vue";
+import InvoiceDetailsTable from "@/components/invoice/form/InvoiceProductsDetailsTable.vue";
+import InvoiceDetails from "@/components/invoice/form/InvoiceDetails.vue";
+import ProductsAutoComplete from "@/components/invoice/form/ProductsAutoComplete.vue";
 
 import { mapActions } from "vuex";
 
@@ -243,3 +243,4 @@ export default {
 		}
 	}
 };
+

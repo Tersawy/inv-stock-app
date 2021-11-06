@@ -1,5 +1,5 @@
 <template>
-	<b-modal id="paymentForm" @hidden="resetModal" hide-footer @ok="handleSave" size="lg" @show="modalIsShown">
+	<b-modal id="paymentForm" @hidden="resetModal" hide-footer @ok="handleSave" size="xl" @show="modalIsShown">
 		<template #modal-header="{ close }">
 			<div class="d-flex align-items-center justify-content-between w-100">
 				<div class="d-flex align-items-center">
@@ -130,7 +130,7 @@
 			},
 
 			dueVariant() {
-				return this.due == 0 ? "success" : this.due < 0 ? "warning" : "danger";
+				return this.due == 0 ? "success" : this.due < 0 ? "orange" : "danger";
 			}
 		},
 

@@ -89,9 +89,13 @@
 			invoiceTotalPrice() {
 				let total = this.totalPriceOfSubtotal - this.invoiceDiscountFixed + this.invoiceShipping + this.invoiceTaxFixed;
 
-				this.invoice.total_price = total;
-
 				return total;
+			},
+
+			watch: {
+				invoiceTotalPrice(value) {
+					this.invoice.total_price = value;
+				}
 			}
 		}
 	};

@@ -40,7 +40,7 @@ Vue.directive("payment-status", function (el, binding) {
 			case PAYMENT_STATUS_UNPAID:
 				return "danger";
 			case PAYMENT_STATUS_PARTIAL:
-				return "warning";
+				return "orange";
 			default:
 				return "info";
 		}
@@ -61,7 +61,7 @@ Vue.directive("purchase-status", function (el, binding) {
 			case PURCHASE_PENDING:
 				return "danger";
 			case PURCHASE_ORDERED:
-				return "warning";
+				return "orange";
 			default:
 				return "info";
 		}
@@ -101,7 +101,7 @@ Vue.directive("sale-status", function (el, binding) {
 			case SALE_PENDING:
 				return "danger";
 			case SALE_ORDERED:
-				return "warning";
+				return "orange";
 			default:
 				return "info";
 		}
@@ -179,7 +179,7 @@ Vue.directive("transfer-status", function (el, binding) {
 			case TRANSFER_PENDING:
 				return "danger";
 			case TRANSFER_SENT:
-				return "warning";
+				return "orange";
 			default:
 				return "info";
 		}

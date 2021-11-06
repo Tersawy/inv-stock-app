@@ -1,6 +1,8 @@
 export default {
 	one: {
-		payments: []
+		payments: [],
+		products: []
 	},
 	oldPayment: null
 };
+

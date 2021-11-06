@@ -76,9 +76,7 @@
 						<b-icon icon="pencil-square" scale="1.5" variant="success" class="c-pointer mx-3"></b-icon>
 					</router-link>
 
-					<router-link :to="{ name: 'ProductUpdate', params: { productId: row.item.id } }">
-						<b-icon icon="trash" scale="1.5" variant="danger" class="c-pointer"></b-icon>
-					</router-link>
+					<b-icon icon="trash" scale="1.5" variant="danger" class="c-pointer" @click="remove(row.item)"></b-icon>
 				</template>
 			</b-table>
 
