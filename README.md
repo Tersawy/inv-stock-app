@@ -1,4 +1,4 @@
-# inv-stock-app
+# locanos
 
 ## Project setup
 ```
